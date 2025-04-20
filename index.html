@@ -3,64 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Program</title>
+    <title>Dagsplan</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 16px;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #333;
+        
+        header {
+            text-align: center;
+            margin-bottom: 24px;
+            background-color: #0077cc;
             color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .contact, .payment {
-            margin-top: 20px;
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .schedule {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .event {
+            background-color: white;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 5px solid #0077cc;
+        }
+        
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .event-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0077cc;
+        }
+        
+        .event-time {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .event-location {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .location-name {
+            flex-grow: 1;
+        }
+        
+        .maps-link {
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: 500;
+            display: inline-block;
+            text-align: center;
+            min-width: 80px;
+        }
+        
+        .maps-link:hover {
+            background: #45a049;
+        }
+        
+        footer {
+            margin-top: 24px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <h1>Event Program</h1>
-    <table>
-        <tr>
-            <th>Event</th>
-            <th>Start</th>
-            <th>Slut</th>
-            <th>Sted</th>
-            <th>Maps</th>
-        </tr>
-        <tr><td>Mødes</td><td>9:45</td><td></td><td>Gordon Sushi</td><td><a href="https://maps.app.goo.gl/KKQWYP9mHvjggNt99" target="_blank">Link</a></td></tr>
-        <tr><td>Michael Pickup</td><td>10:00</td><td></td><td></td><td></td></tr>
-        <tr><td>Bueskydning</td><td>11:00</td><td>12:00</td><td></td><td></td></tr>
-        <tr><td>Kaffe/frokost</td><td>12:45</td><td>14:15</td><td>Kaffeværket</td><td><a href="https://maps.app.goo.gl/4ko3i1qwaJbL7eUq9" target="_blank">Link</a></td></tr>
-        <tr><td>Vin</td><td>14:45</td><td>17:00</td><td>S'vineriet</td><td><a href="https://maps.app.goo.gl/C7o5qFxJ7zc8yj479" target="_blank">Link</a></td></tr>
-        <tr><td>Papas</td><td>17:15</td><td>19:15</td><td>Papas Pap Bar</td><td><a href="https://maps.app.goo.gl/awDgABs3FGxTsbvV7" target="_blank">Link</a></td></tr>
-        <tr><td>Mad</td><td>19:30</td><td>21:30</td><td>Koi Sushi</td><td><a href="https://maps.app.goo.gl/rGVr8tcPXo8ufAak8" target="_blank">Link</a></td></tr>
-        <tr><td>C4</td><td>21:30</td><td>???</td><td></td><td></td></tr>
-    </table>
+    <header>
+        <h1>Dagens Program</h1>
+        <p>20. april 2025</p>
+    </header>
     
-    <div class="payment">
-        <h2>Betaling</h2>
-        <p>MobilePay til Daniel: <strong>27588003</strong></p>
-        <p>eller konto overførsel:</p>
+    <div class="schedule">
+        <div class="event">
+            <div class="event-header">
+                <div class="event-title">Mødes</div>
+                <div class="event-time">9:45</div>
+            </div>
+            <div class="event-location">
+                <div class="location-name">Gordon sushi</div>
+                <a href="https://maps.app.goo.gl/KKQWYP9mHvjggNt99" class="maps-link" target="_blank">Kort</a>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="event-header">
+                <div class="event-title">Michael Pickup</div>
+                <div class="event-time">10:00</div>
+            </div>
+            <div class="event-location">
+                <div class="location-name">Munke Mose Allé</div>
+                <a href="https://maps.app.goo.gl/ce9PZ2cfGQBUTFX86" class="maps-link" target="_blank">Kort</a>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="event-header">
+                <div class="event-title">Bueskydning</div>
+                <div class="event-time">11:00 - 12:00</div>
+            </div>
+            <div class="event-location">
+                <div class="location-name">Næsbyvej 18</div>
+                <a href="https://maps.app.goo.gl/VP5GzNeJ3jdDBj2m6" class="maps-link" target="_blank">Kort</a>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="event-header">
+                <div class="event-title">Kaffe/frokost</div>
+                <div class="event-time">12:45 - 14:15</div>
+            </div>
+            <div class="event-location">
+                <div class="location-name">Kaffeværket</div>
+                <a href="https://maps.app.goo.gl/4ko3i1qwaJbL7eUq9" class="maps-link" target="_blank">Kort</a>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="event-header">
+                <div class="event-title">Vin</div>
+                <div class="event-time">14:45 - 17:00</div>
+            </div>
+            <div class="event-location">
+                <div class="location-name">S'vineriet</div>
+                <a href="https://maps.app.goo.gl/C7o5qFxJ7zc8yj479" class="maps-link" target="_blank">Kort</a>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="event-header">
+                <div class="event-title">Papas</div>
+                <div class="event-time">17:15 - 19:15</div>
+            </div>
+            <div class="event-location">
+                <div class="location-name">Papas pap bar</div>
+                <a href="https://maps.app.goo.gl/awDgABs3FGxTsbvV7" class="maps-link" target="_blank">Kort</a>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="event-header">
+                <div class="event-title">Mad</div>
+                <div class="event-time">19:30 - 21:30</div>
+            </div>
+            <div class="event-location">
+                <div class="location-name">Koi Sushi</div>
+                <a href="https://maps.app.goo.gl/rGVr8tcPXo8ufAak8" class="maps-link" target="_blank">Kort</a>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="event-header">
+                <div class="event-title">C4</div>
+                <div class="event-time">21:30 - ???</div>
+            </div>
+            <div class="event-location">
+                <div class="location-name">Bar</div>
+                <span class="maps-link" style="background-color: #666;">TBD</span>
+            </div>
+        </div>
     </div>
     
-    <div class="contact">
-        <h2>Kontakt</h2>
-        <p>Daniel: 27588003, <a href="mailto:hamkens@gmail.com">hamkens@gmail.com</a></p>
-        <p>Henrik Thoke</p>
-    </div>
+    <footer>
+        <p>Hav en god dag!</p>
+    </footer>
 </body>
 </html>
-
